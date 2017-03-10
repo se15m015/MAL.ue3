@@ -16,10 +16,10 @@ dataSet = datasets.load_iris()
 # Shuffle our input data
 data, target = shuffle(dataSet.data, dataSet.target, random_state=getRandomState())
 
-# kNN(data, target)
-# decisionTree(data, target)
-# naiveBayes(data, target)
-# perceptron(data, target)
+kNN(data, target)
+decisionTree(data, target)
+naiveBayes(data, target)
+perceptron(data, target)
 
 # load the DIGITS dataset
 printHeaderDataset("DIGITS")
@@ -27,11 +27,10 @@ dataSet = datasets.load_digits()
 # Shuffle our input data
 data, target = shuffle(dataSet.data, dataSet.target, random_state=getRandomState())
 
-# kNN(data, target)
-# decisionTree(data, target)
-# naiveBayes(data, target)
-# perceptron(data, target)
-
+kNN(data, target)
+decisionTree(data, target)
+naiveBayes(data, target)
+perceptron(data, target)
 
 # load the BEAST-CANCER dataset
 printHeaderDataset("BREAST-CANCER")
@@ -40,10 +39,10 @@ dataSet = datasets.load_breast_cancer()
 # Shuffle our input data
 data, target = shuffle(dataSet.data, dataSet.target, random_state=getRandomState())
 
-# kNN(data, target)
-# decisionTree(data, target)
-# naiveBayes(data, target)
-# perceptron(data, target)
+kNN(data, target)
+decisionTree(data, target)
+naiveBayes(data, target)
+perceptron(data, target)
 
 
 # load the BEAST-CANCER-FROM-FILE dataset
@@ -59,15 +58,14 @@ with open('data/breast-cancer-wisconsin.data') as csv_file:
 
     for count, value in enumerate(data_file):
         #remove id using 1:
-        print(value[1:-1])
-        print(value[-1])
-        print(count)
-        print(i)
+        # print(value[1:-1])
+        # print(value[-1])
+        # print(count)
+        # print(i)
         if not any('?' in s for s in value):
             data[i] = np.asarray(value[1:-1], dtype=np.int)
             target[i] = np.asarray(value[-1], dtype=np.int)
             i += 1
-
 
 # # Shuffle our input data
 data, target = shuffle(dataSet.data, dataSet.target, random_state=getRandomState())
